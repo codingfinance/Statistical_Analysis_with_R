@@ -1,6 +1,5 @@
 Chapter 10 - Hypothesis Testing
 ================
-DD
 
 ``` r
 library(tidyquant)
@@ -71,12 +70,8 @@ tibble(x = x_values,
                    yend = dnorm(qnorm(0.95,100,15), 100,15))) +
    annotate("segment", x = 165, xend = 135, y = 0.005, yend = 0.0005, colour = "black", 
             alpha=0.6, arrow=arrow()) +
-  annotate("segment", x = 130, xend = 130, y = 0.035, yend = 0.028, colour = "black", 
-            alpha=0.6, arrow=arrow()) +
-  annotate("segment", x = 100, xend = 100, y = 0.035, yend = 0.028, colour = "black", 
-            alpha=0.6, arrow=arrow()) +
-  geom_text(aes(x = 100, y = 0.036, label = 'H0')) +
-  geom_text(aes(x = 130, y = 0.036, label = 'H1')) +
+  geom_text(aes(x = 100, y = 0.025, label = 'H0')) +
+  geom_text(aes(x = 130, y = 0.025, label = 'H1')) +
   geom_text(aes(x = 181, y = 0.006, label = 'Null Hypothesis \nRejection area')) +
   theme_classic() +
   scale_y_continuous(expand = c(0,0)) +
